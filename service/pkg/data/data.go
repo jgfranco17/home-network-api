@@ -6,15 +6,14 @@ type HealthStatus struct {
 }
 
 type AboutInfo struct {
-	Name         string              `json:"name"`
-	Author       string              `json:"author"`
-	Repository   string              `json:"repository"`
-	Contributors []string            `json:"contributors"`
-	Version      string              `json:"version"`
-	Environment  string              `json:"environment"`
-	License      string              `json:"license"`
-	Languages    []string            `json:"languages"`
-	Algorithms   map[string][]string `json:"algorithms"`
+	Name         string   `json:"name"`
+	Author       string   `json:"author"`
+	Repository   string   `json:"repository"`
+	Contributors []string `json:"contributors"`
+	Version      string   `json:"version"`
+	Environment  string   `json:"environment"`
+	License      string   `json:"license"`
+	Languages    []string `json:"languages"`
 }
 
 type BasicErrorInfo struct {

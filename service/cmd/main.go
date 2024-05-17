@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jgfranco17/home-network-api/service/pkg/env"
@@ -38,7 +39,8 @@ func main() {
 		log.Infof("Running API production server on port %d", *port)
 		gin.SetMode(gin.ReleaseMode)
 	}
-	err := router.GetRouter().Run()
+	service := router.GetRouter()
+	err := service.Run(fmt.Sprintf(":%d", *port))
 	if err != nil {
 		log.Error("Error starting the server:", err)
 	}

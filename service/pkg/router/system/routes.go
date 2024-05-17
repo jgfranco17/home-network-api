@@ -13,8 +13,8 @@ func init() {
 }
 
 func SetSystemRoutes(route *gin.Engine) {
-	route.GET("/", HomeHandler)
-	route.GET("/about", AboutHandler)
-	route.GET("/health-check", HealthCheckHandler)
-	route.NoRoute(NotFoundHandler)
+	route.GET("/", HomeHandler())
+	route.GET("/about", AboutHandler())
+	route.GET("/health-check", HealthCheckHandler())
+	route.NoRoute(NotFoundHandler())
 }
